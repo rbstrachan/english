@@ -24,6 +24,9 @@ import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
 
+import GoogleFontLoader from "./custom/GoogleFontLoader"
+import SidebarLinks from "./custom/SidebarLinks"
+
 export {
   ArticleTitle,
   Content,
@@ -50,4 +53,7 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+
+  GoogleFontLoader,
+  SidebarLinks
 }
