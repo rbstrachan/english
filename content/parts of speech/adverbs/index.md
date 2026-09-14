@@ -42,7 +42,7 @@ Here you'll find all the information you need to efficiently and effectively lea
 > - [ ]  Adverbs of Degree
 > - [ ]  Other Adverbs
 
-Adverbs are [[parts of speech]] that modify (i.e. describe) a verb, adjective or even another adverb.\
+Adverbs are [[parts of speech]] that modify (i.e. describe) a verb, adjective or even another adverb.
 They **add** meaning and context to **verbs**, hence **adverbs**.[^adverb]
 
 In English, many (although not all) adverbs end in "-ly", e.g. slow**ly**, happi**ly**, quiet**ly**, but *not* straight.
@@ -59,7 +59,7 @@ In the below page, you'll get a more in-depth understanding of exactly what adve
 - adverbs can appear before or after the word that they modify, depending on the type of adverb and context
 - some adverbs can be created from adjectives
 
-Start by reading the page below that contains important information to help you throughout the following lessons.\
+Start by reading the page below that contains important information to help you throughout the following lessons.
 <u>Some articles may be harder to understand without reading this page first.</u>
 
 [[fundamentals|Adverb Fundamentals]]

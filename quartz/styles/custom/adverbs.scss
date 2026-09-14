@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // set colour of links and headers in adverb notes
 $adverb-links: (
   "fundamentals": (color: #d9534f, icon: "🔰️"), // red
@@ -13,16 +15,16 @@ $adverb-links: (
 
 @each $slug, $data in $adverb-links {
   a.internal[href*="#{$slug}"] {
-    color: map-get($data, color);
+    color: map.get($data, color);
 
     &::before {
-      content: "#{map-get($data, icon)} ";
+      content: "#{map.get($data, icon)} ";
       padding-right: 5px;
       font-style: normal;
     }
   }
 
   :is(h1, h2, h3, h4, h5, h6)[id*="#{$slug}"] {
-    color: map-get($data, color);
+    color: map.get($data, color);
   }
 }
