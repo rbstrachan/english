@@ -1,0 +1,13 @@
+public
+quartz/.quartz-cache
+quartz/.quartz-cache/transpiled-build.mjs
+quartz/.quartz-cache/transpiled-build.mjs.map
+node_modules
+.obsidian
+.DS_Store
+prof
+tsconfig.tsbuildinfo
+.quartz-cache
+private/
+.replit
+replit.nix

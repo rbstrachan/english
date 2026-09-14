@@ -1,0 +1,28 @@
+// set colour of links and headers in adverb notes
+$adverb-links: (
+  "fundamentals": (color: #d9534f, icon: "🔰️"), // red
+  "time":          (color: #d97724, icon: "⏰"), // Orange
+  "frequency":     (color: #cb9434, icon: "🔄"), // Yellow / Gold
+  "place":         (color: #50946e, icon: "📍"), // Green
+  "manner":        (color: #0e8594, icon: "🎨"), // Teal / Cyan
+  "degree":        (color: #387dc9, icon: "📊"), // Blue
+  "certainty":     (color: #4f46e5, icon: "🎯"), // Indigo
+  "conjunctive":   (color: #9a6bb4, icon: "🔗"), // Purple / Violet
+  "interrogative": (color: #c14c8a, icon: "❓")  // Magenta / Rose
+);
+
+@each $slug, $data in $adverb-links {
+  a.internal[href*="#{$slug}"] {
+    color: map-get($data, color);
+
+    &::before {
+      content: "#{map-get($data, icon)} ";
+      padding-right: 5px;
+      font-style: normal;
+    }
+  }
+
+  :is(h1, h2, h3, h4, h5, h6)[id*="#{$slug}"] {
+    color: map-get($data, color);
+  }
+}
