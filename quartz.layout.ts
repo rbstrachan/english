@@ -8,8 +8,9 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      "reiwa.ca": "https://reiwa.ca",
+      GitHub: "https://github.com/rbstrachan",
+      Contact: "https://reiwa.ca/contact"
     },
   }),
 }
@@ -24,6 +25,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+
+    Component.GoogleFontLoader()
   ],
   left: [
     Component.PageTitle(),
@@ -38,7 +41,27 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      sortFn: (a, b) => {
+        // If both are files OR both are folders, sort alphabetically by displayName
+        if ((a.file && b.file) || (!a.file && !b.file)) {
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
+        }
+
+        // Put files before folders
+        if (a.file && !b.file) {
+          return -1
+        } else {
+          return 1
+        }
+      },
+    }),
+
+    Component.DesktopOnly(Component.Spacer()),
+    Component.DesktopOnly(Component.SidebarLinks())
   ],
   right: [
     Component.Graph(),
@@ -62,7 +85,27 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      sortFn: (a, b) => {
+        // If both are files OR both are folders, sort alphabetically by displayName
+        if ((a.file && b.file) || (!a.file && !b.file)) {
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
+        }
+
+        // Put files before folders
+        if (a.file && !b.file) {
+          return -1
+        } else {
+          return 1
+        }
+      },
+    }),
+
+    Component.DesktopOnly(Component.Spacer()),
+    Component.DesktopOnly(Component.SidebarLinks())
   ],
   right: [],
 }
