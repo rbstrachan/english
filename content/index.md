@@ -8,7 +8,7 @@ cssclasses: no-page-header
 Built by professional language instructors for independent learners.
 
 ## What This Handbook Provides
-By using Reiwa's ESL QRH, you have access to...
+Reiwa's ESL QRH provides...
 - **language reference guides**, including concise explanations covering English grammar rules, vocabulary distinctions, sentence structures and common usage patterns
 - **practice tools** that generate unlimited practice questions for any topic, always-accessible from the sidebar
 - **targeted 1-on-1 support** via optional private tutoring for professional instruction and personalised lessons.
