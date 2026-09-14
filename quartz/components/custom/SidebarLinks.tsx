@@ -6,17 +6,19 @@ function SidebarLinks({ fileData, displayClass, cfg }: QuartzComponentProps) {
 
   return (
     <div class={`sidebar-links ${displayClass ?? ""}`}>
-      {fileData?.slug && fileData.slug !== "index" && (
         <span>
-          <a href={`${prefix}/`}>
-            {isFrench ? "À propos" : "About"}
-          </a>
-          <small><b> ・ </b></small>
+        {fileData?.slug && fileData.slug !== "index" && (
+          <>
+            <a href={`${prefix}/`}>
+              {isFrench ? "À propos" : "About"}
+            </a>
+            <small><b> ・ </b></small>
+          </>
+        )}
           <a href={`${prefix}/glossary`}>
             {isFrench ? "Glossaire" : "Glossary"}
           </a>
         </span>
-      )}
       <a href={`${prefix}/practice`}>
         {isFrench ? "Questions d'entraînement" : "Practice Questions"}
       </a>
